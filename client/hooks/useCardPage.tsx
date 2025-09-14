@@ -28,7 +28,7 @@ export function useCardPage(commerceId: string, userId: string) {
     fetchUser();
   }, [commerceId, userId]);
 
-  // Refresh automático cada 5 segundos
+    // Refresca el usuario cada 5 segundos
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
@@ -38,8 +38,7 @@ export function useCardPage(commerceId: string, userId: string) {
       } catch (error) {
         console.error("Error refreshing user:", error);
       }
-    }, 5000); // 5000ms = 5 segundos
-
+    }, 5000);
     return () => clearInterval(interval);
   }, [commerceId, userId]);
 
