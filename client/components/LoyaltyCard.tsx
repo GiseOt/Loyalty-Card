@@ -67,7 +67,11 @@ export default function LoyaltyCard({
 
             {stamps >= maxStamps && (
               <div className="text-green-600 font-bold text-lg">
-                🎉 ¡Tarjeta Completa!
+               <h2>🎉 ¡Tarjeta Completa!</h2> 
+                <p className="text-gray-700 text-sm">
+                  Presenta esta pantalla o haz una captura de pantalla para reclamar
+                  tu premio en la tienda.
+                </p>
               </div>
             )}
           </div>
